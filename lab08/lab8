@@ -1,0 +1,33 @@
+CS 265 Lab7 - Konstantin Zelmanovich
+
+1) 
+
+i. Hide implementation details
+
+	It means that implementation of a program must be hidden so that they can be changed without involving users
+
+ii. Choose a small orthogonal set of primitives
+
+	It means that interface should provide a set of only necessary info and functions
+
+iii. Don't reach behind the user's back
+
+	It means that interface should only do what it has and supposed to do and should do nothing that user is not not aware about
+
+iv. Do the same thing the same way everywhere
+
+	It means that similar things must be done the same way and consistancy has to be maintained for implementation algorithms, functions etc
+
+
+2) This implementation does not properly handle empty fields, commas within double and escaped quotes
+
+3) This implementation can properly handle empty fields, commas within double and escaped quotes
+
+4) Can not read a csv file correctly and it is not possible to parse multiple files, because C is not an object oriented and doesn't have classes
+
+5) C++ implementation does not solve the issues, still not possible to handle empty fields
+
+6) Yes
+
+
+

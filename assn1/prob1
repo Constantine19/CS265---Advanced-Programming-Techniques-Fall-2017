@@ -1,0 +1,23 @@
+#!/bin/bash
+#prob1
+#Konstantin Zelmanovich
+#This script prints the # of directories and messages within the ARCHIVE
+
+#initializing total # of directories and messages to zero
+total_directories=0
+total_messages=0
+
+#used my own repository for test
+#ARCHIVE="/home/kgz25/CS265/Git/assignment*"
+
+#upper loop to count directories 
+for directory in $ARCHIVE/*; do
+	let total_directories+=1
+
+	#inner loop to count messages
+	for message in $directory/*; do
+		let total_messages+=1
+	done
+done
+
+echo $total_directories $total_messages

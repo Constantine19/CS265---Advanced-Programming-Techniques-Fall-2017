@@ -1,0 +1,31 @@
+#!/bin/bash
+#prob2
+#Konstantin Zelmanovich
+#This script determines how many messages are in the longest thread
+
+#used my own repository for test
+#ARCHIVE="/home/kgz25/CS265/Git/assignment*"
+
+#creating a temporary file to hold the data
+touch temp_file
+
+#upper loop to go over the directory
+for directory in $ARCHIVE/*; do
+	#inner loop to go over the messages
+	for message in $directory/*; do
+		
+		#assign each file and thread_id
+		file=${message##*/}
+        	thread_id=${file%_*}
+
+		#put the data into a temporary file
+		echo "$thread_id" >> temp_file
+	done
+done
+
+
+#sorting the data, counting the repeated threads, sorting and using awk to output which problem has the most amount of messages 
+sort temp_file | uniq -c | sort -nr | awk 'BEGIN{n=0;} NR==1{n=$1} {if ($1==n) print $2;} END{print n " messages in total";}'
+
+#deliting the temporary file at the end
+rm temp_file

@@ -1,0 +1,29 @@
+#!/bin/bash
+#prob4
+#Konstantin Zelmanovich
+#This script determine the number of distinct hostnames as-well as how many messages were sent from each
+
+#used my own repository for test
+#ARCHIVE="/home/kgz25/CS265/Git/assignment*"
+#ARCHIVE="/home/kschmidt/public_html/Files/DrMathTest/*"
+ARCHIVE="/home/kschmidt/public_html/Files/DrMathTest"
+
+#Defining the pattern
+pattern="^To: .*@.*"
+
+#creating a temporary file to hold the data
+touch temp_file
+
+#look for a pattern using grep command
+#upper loop for each directory
+for directory in $ARCHIVE/*; do
+	#inner loop for each message
+	for message in $directory/*; do 
+     	grep -m 1 "$pattern" "$message" >> temp_file
+	done
+done
+
+#using AWK to pull out the domain name determine how many messages were sent 
+awk -F '[@ ]' '{print $3}' temp_file | sort -k1nr | uniq -c | awk '{print $2" "$1}
+		END {print "\ntotal messages sent: "NR}'
+rm temp_file

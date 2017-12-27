@@ -1,0 +1,18 @@
+CS 265 Lab9 - Konstantin Zelmanovich
+
+1. Segmentation fault and a new file called "core" created in the directory
+
+2. inTable() at strcmp()
+
+3. 
+	a. bug1.c - was not compiling, fixed by changing scanf( "%d", n ) to scanf( "%d", &n )
+	b. bug2.c - compiling, but with a wrong output, fixed by changing printf("Pi=%d, n=%f\n", pi, n) to printf("Pi=%f, n=%d\n", pi, n)
+	c. bug3.c - was not compiling with in.bug3 as an input, changed the increment of numLines from before to after the call
+	d. avg.c - was not compiling, fixed by changing scanf("%d",n) to scanf("%d",&n)
+	e. The pivot element was not moving to the 1st position 
+		swap(v,0,rand() % n)
+		assert((last >= 0) && (last < n))
+		
+4. Compiler can not catch this, because can only catch syntax errors and we were passing pointers to the functions and not actual data types
+
+5. It will fail with the segmentation fault

@@ -1,0 +1,65 @@
+Lab 5 Konstantin Zelmanovich
+
+1. 
+	List - a collection of items that consist of data and a pointer which points to the next item in the list. There would typically be a "head" which points to the first item and the last item would point to NULL
+	
+	Stack - a data structure in which items are inserted and removed according to the last-in first-out (LIFO) principle
+	
+	Queue - a data structure in which items are inserted and removed according to the first-in first-out (FIFO) principle
+	
+	Dictionary - a data structure which holds a key and a satellite data associated with that key
+	
+2.
+	log2(n) times
+	Since binary search eliminates half the items with every check, this is is the number of times we can divide n by 2 before it reaches the item that is being searched
+	
+3.	
+	A linear search checks and compares every n element in the array. The search will go through all the elements before it finds what is being searched. So it will execute a comparison n times
+	
+4.
+	When searching unsorted lists
+
+5.
+	*84* 37 93 82 98 27 63 73 93 27 75 55 45 8
+	37 82 27 63 73 27 75 55 45 8 *84* 93 98 93
+	*37* 82 27 63 73 27 75 55 45 8	 84 	*93* 98 93
+	27 27 8 *37* 82 63 73 75 55 45 	 84   *93* 98 93
+	*27* 27 8   37   *82* 63 73 75 55 45   84   93   *98* 93
+	8 *27* 27		37   63 73 75 55 45 *82*   84   93   93 *98*
+	8   27   27   37   *63* 73 75 77 45   82   84   93   93   98
+	8   27   27   37   45 *63* 73 75 77   82   84   93   93   98
+	8   27   27   37   45   63   *73* 75 77   82   84   93   93   98
+	8   27   27   37   45   63   73   *75* 77   82   84   93   93   98
+	8   27   27   37   45   63   73   75   77   82   84   93   93   98
+	
+6. 
+	L ->3 ->24 ->06 ->NULL
+	
+7. 
+	L ->[13,[28,[13,[24,NONE]]]]
+	
+8. 
+	100 bytes was allocated to the pointer s for the last set when the container called buffer was still holding its own contents. The pointer s was able to point to up to 100 bytes which included the data after the buffer container too.
+
+9.
+	0
+	1
+	2
+	3->[Cos,86]->[Bob,38]
+	4->[Jaga,24]->[Kate,28]->[Nash,11]->[Vera,99]
+	5->[Jesse,78]
+	6
+
+10.
+	int find(char *key, int *p_ans) {
+	entry *e;
+	int h;
+	h = hash(key);
+	
+	for( e = table[h]; e!=NULL; e=e->next)
+		if( strcmp(key ,e->key) == 0 ) {
+			*p_ans = e->val;
+			return 1;
+	}
+	return 0;
+}

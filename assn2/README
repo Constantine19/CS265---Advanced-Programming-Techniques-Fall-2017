@@ -1,0 +1,45 @@
+# Konstantin Zelmanovich
+# CS 265
+# Assignment 2
+# 11/13/2017
+# Python 2.7.12 on tux4.cs.drexel.edu
+
+The Knight's Tour program, written in Python is an attempt to move the knight on a board, such that each space is visited exactly once.
+
+Program reads 3 arguments: rows, columns and attempts . The first 2 arguments are the size of the board, rows x columns. The last argument is the number of attempts to make.
+
+
+EXAMPLE INPUT #1:
+
+kgz25@tux4:~/CS265/Git/assn2$ python knight.py 6 6 40000
+
+EXAMPLE OUTPUT #1:
+
+SUCCESS:
+
+[1, 4, 33, 22, 19, 12]
+[34, 23, 2, 11, 32, 21]
+[3, 10, 5, 20, 13, 18]
+[24, 35, 8, 15, 28, 31]
+[9, 6, 29, 26, 17, 14]
+[36, 25, 16, 7, 30, 27]
+
+OR
+
+EXAMPLE INPUT # 2
+
+kgz25@tux4:~/CS265/Git/assn2$ python knight.py 6 6 4000
+
+EXAMPLE OUTPUT #2:
+
+FAIL:
+
+[1, 24, 21, 14, 'x', 'x']
+['x', 15, 2, 23, 20, 13]
+[3, 22, 11, 18, 7, 'x']
+[16, 'x', 8, 5, 12, 19]
+['x', 4, 17, 10, 'x', 6]
+['x', 9, 'x', 'x', 'x', 'x']
+
+
+

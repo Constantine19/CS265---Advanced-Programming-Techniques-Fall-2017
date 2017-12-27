@@ -1,0 +1,11 @@
+<project default='JavaCalc'>
+	<target name='JavaCalc'>
+			<javac srcdir='./' includes='JavaCalc.java'></javac>
+		</target>
+		<target name='runJavaCalc'>
+			<java classpath='./' classname='JavaCalc' fork="true">
+				<arg file="input.infix" /> </java>
+		</target>
+</project>
+
+

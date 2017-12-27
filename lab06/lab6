@@ -1,0 +1,96 @@
+Lab 6 Konstantin Zelmanovich
+
+1. 
+add() - adds a new element to the list "State", which contains an array of prefix strings and a suffix list, as well as updating the suffix list
+addSuffix() - just adds a new element to the suffix list
+	
+2. 
+
+
+lookup() function searches for a prefix. It accepts a string array with length "NPREF", and iterates through the list "State" at index "h". If all prefixes in the "State" element match with the prefix array argument then the state is being returned. If a "State" isn't returned and a the create flag is true then a new "State" element will be created with the same prefix array passed in, otherwise a NULL "State" is returned. 
+
+lookup() is called by generate() and add()
+
+3. 
+
+table is attached as Q3.jpg
+
+It's - 3 
+a - 3 
+new - 3 
+dawn - 2
+
+4.
+
+The advantage is that each string is only allocated the exact amount of memory that it needs and it is easy to find a proper suffix. Moreover, the programmer has a control over implementation
+
+5. 
+
+Have to free each pointer so that the memory can be allocated to something else and need to write more code in comparison with a higher level language
+
+6.
+
+void cleanup()
+{
+	int i;
+	State *s, *q;
+	for (i = 0; i < NHASH ; ++i)
+	{
+		for(s = statetab[i] ; s != NULL ; s = q)
+		{
+			q = s->next;
+			free( s );
+		} 
+	}
+} 
+
+7.
+
+Works properly. No difficulties.
+
+8.
+
+Each string is reached only once as each "state" element is only freed once
+
+
+9.
+
+Prefixes are stored in a double ended queue. A vector always allocates more memory than required. Storing the prefixes in a double queue rather than using vector allows to pop the first element and also add a new element to the end
+
+10. 
+
+A map replaces the hash table
+
+11.
+
+Suffices are stored in a vector inside the "statetab" map as the value, the prefix is the key
+
+12.
+
+Will be easier to write, as it requires less lines of code. Moreover, C++ gives an access to built-in datatypes, therefore the hash table creation can be avoided
+
+13.
+
+C++ is slower than C
+
+14.
+
+The prefixes are stored in varaiables "w1" and "w2", which are stored in a tuple called "key"
+
+15.
+
+The dictionary "Table"
+
+16.
+
+In the dictionary "Table"
+
+17.
+
+Writing a code in Python is the easiest thing, therefore less lines and less work
+
+18.
+
+Python runs much slower than C and C++.
+Additionally, C++ has better data structures
+

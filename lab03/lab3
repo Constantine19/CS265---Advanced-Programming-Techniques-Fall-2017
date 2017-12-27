@@ -1,0 +1,27 @@
+Lab3 Konstantin Zelmanovich
+
+1.1 egrep 'the' bright_side_of_life
+
+1.2 egrep '\<the\>' bright_side_of_life
+
+1.3 egrep '\<Just\>' bright_side_of_life
+
+1.4 egrep '[Jj]ust' bright_side_of_life
+
+1.5 egrep '^[Jj]ust' bright_side_of_life
+
+1.6 egrep '\<[bm]ad\>' bright_side_of_life
+
+1.7 egrep '[dbr*]eath\>' bright_side_of_life
+
+1.8 egrep 'you[,.]$' bright_side_of_life
+
+1.9 egrep '^[[:space:]]' bright_side_of_life
+
+1.10 egrep '^$' bright_side_of_life
+
+1.11 egrep '^$' bright_side_of_life -c (10 lines)
+
+3.1 git checkout 1ccc3f79020acb134e8ddaeab5832ac0e4558448 -- lab3
+
+3.2 Check the log for the repository

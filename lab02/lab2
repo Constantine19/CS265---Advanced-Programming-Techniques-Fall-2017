@@ -1,0 +1,38 @@
+Konstantin Zelmanovich
+Lab2
+
+
+1)The output is the following:
+./CS265/Git/lab02/tmp/gotMe.bash
+./.bash_history
+./.viminfo
+
+2) find -name *.bash
+
+3)The output is the following:
+./CS265/Git/lab01/other_files/hello.bash
+./CS265/Git/lab02/tmp/gotMe.bash
+
+4)  97 (lines)  499 (words) 2960 (char)
+
+5) grep the breadIsDangerous.txt | wc -l
+
+6) There is a backup of the file spellExample in the directory
+
+7) The command diff is used to compare 2 files and in this example it outputs the extra line in the file spellExample, that is not in spellExample.bak file
+
+8) Nothing is outputted, because no differences
+
+9) 
+1st Output is 0 -  found the string "dough" within the file and everything worked as expected. No errors were encountered while locating the string "dough"
+2nd Output is 1 - The string "uniqueString" could not be found in the file
+3rd Output is 2 - The specified file "noSuchFile" could not be found
+
+10) Uploaded
+
+11) Uploaded
+
+12) Uploaded
+
+
+

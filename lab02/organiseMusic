@@ -1,0 +1,12 @@
+#!/bin/bash
+#Konstantin Zelmanovich
+#Lab2 - Q12
+
+for i in *.mp3; do
+artist="$(echo -e "${i}" | cut -d'-' -f 1 | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+song="$(echo -e "${i}" | cut -d'-' -f 2 | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+
+#switch "-p" means that it will created a folder only if it doesn't exist 
+mkdir -p "$artist" 
+mv "$i" "$artist//$song"
+done

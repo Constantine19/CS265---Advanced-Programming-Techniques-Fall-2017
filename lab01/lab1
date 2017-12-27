@@ -1,0 +1,52 @@
+CS 265 Lab1 - Konstantin Zelmanovich
+
+1) A file ".bash_profile" is invoked only when invoking as a login shell.
+   A file ".bashrc" is invoked when bash is not invoked as a login shell. It is the first file that will be read and executed.
+
+2) File is attached
+
+3) I can see that all the files in the directory are displayed with the permissions
+
+4) chmod 644 - "Read & Write" access for me, "Read" to everyone else
+
+5) chmod 755 - All permissions (Read, Write and Execute) for me, "Read & Execute" to everyone else
+
+6) I can read the file
+
+7) I can read the file
+
+8) Success :)
+
+9) Can give an execute permission to myself or to my group
+
+10) When I pressed started editing the file in "Insert mode", the read text poped up at the bottom saying "Warning: Changing a Readonly file", then when I tried to save it poped up "Readonly option is set (add ! to override)"
+
+11) ls * - lists all the files 
+    ls a* - lists all the files that begin with "a"
+    ls *m* - lists all the files that have "m" in between other letters 
+    ls anno? - lists all the files that start with "anno" with 1 character in the end
+    ls annoy? - Nothing is listed..because it should have listed all the files that start with "annoy" with 1 character in the end. There are no such files in the directory.
+
+12) Command has created 2 files: "a" and "space"
+
+13) echo Is a < b? 	- No such file or directory
+    echo "Is a < b?" 	- Is a < b?
+    echo "\$USER is $USER" - $USER is kgz25
+    echo '\$USER is $USER' - $USER is $USER
+    echo "Today is `date`" - Today is Fri Sep 29 15:06:14 EDT 2017
+    echo "Today is $(date)" - Today is Fri Sep 29 15:08:03 EDT 2017
+    echo 'Today is `date`' - Today is `date` 
+    echo -e "Files that start w/e:\n`ls e*`" - ls: cannot access 'e*': No such file or directory
+Files that start w/e:
+
+14) -n sorts from the lowest to highest number in the list
+
+15) sort -nr itemList-2cols | head -8
+
+16) lab1.tar.gz
+
+17) Became a .tar file
+
+18) grep Vacation *
+
+19) find /home/kgz25 -name lab1     

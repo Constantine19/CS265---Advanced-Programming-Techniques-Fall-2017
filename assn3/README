@@ -1,0 +1,7 @@
+Konstantin Zelmanovich
+CS 265
+Assignment 3
+28/11/2017
+java version "1.8.0_144" on tux4.cs.drexel.edu
+
+This program parses infix expressions into appropriate Tokens, stored in a linear container ArrayList,passes the infix expression to a function that returns the expression to postfix form, then passes it to a function which evaluates the postfix expression. Program evaluates only integer arithmetic and positive numbers.

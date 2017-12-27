@@ -1,0 +1,22 @@
+CS265 section 005
+Konstantin Zelmanovich
+
+Requirements: before running each script, the variable ARCHIVE needs to be specified with the required path
+
+1. prob1 
+
+This script prints the total number of directories and messages within the path that is set to variable ARCHIVE
+
+2. prob2
+
+This script determines how many messages are in the longest thread and prints out the number of the messages
+
+3. prob3
+
+This script takes the year, month and day (Example: bash prob3 2003 11 27) as command-line arguments and returns a list of messages that were sent on that day
+
+NOTE: It was not mentioned in the assignment, but I have also added the IF statement at the beginning to check if there are 3 arguments passed. 
+
+4. prob4
+
+This script determine the number of distinct hostnames as-well as how many messages were sent from each

@@ -1,0 +1,26 @@
+#!/bin/bash
+#prob3
+#Konstantin Zelmanovich
+#This script takes the year, month and day (Example: bash prob3 2003 11 27) as command-line arguments and returns a list of messages that were sent on that day
+
+#used my own repository for test
+#ARCHIVE="/home/kgz25/CS265/Git/assignment*"
+ARCHIVE="/home/kschmidt/public_html/Files/DrMathTest/*"
+
+
+#Checks if arguments are passed correctly
+if [ "$#" -ne 3 ]; then
+	echo "Please specify the date in the following format: yyyy mm dd"
+	exit
+fi
+
+#Defining the time pattern
+timestamp="$2"/"$3"/"$1"
+
+#look for a timestamp using grep
+dataset=$(grep -rl "^TimeStamp: $timestamp" $ARCHIVE)
+
+#loop to echo all the messages, without the full path
+for message in $dataset; do
+	echo ${message##*/}
+done

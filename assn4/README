@@ -1,0 +1,6 @@
+CS 265 Assignment 4
+Author: Konstantin Zelmanovich
+Date: 12/11/2017
+Platform: Python 2.7.12 on tux4.cs.drexel.edu
+
+This is a command-line utility that lists bank account information and transactions such as deposits and withdrawals
